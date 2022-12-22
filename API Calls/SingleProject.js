@@ -374,14 +374,62 @@ function getCommentTemplate(comment) {
 </div>
     `;
 }
+
+/**
+ * Setting up filter options
+ */
+const filterOptions = {
+    noOfCommentsPerPage: null,
+    page: 1,
+};
+
+function changePage(page) {
+    if (page == filterOptions.page) {
+        return;
+    }
+
+    const previousActive = document.getElementById(
+        `page-number-${filterOptions.page}`
+    );
+    if (previousActive) {
+        previousActive.classList.toggle("active-page-number");
+    }
+    filterOptions.page = page;
+
+    const currentActive = document.getElementById(`page-number-${page}`);
+    if (currentActive) {
+        currentActive.classList.toggle("active-page-number");
+    }
+
+    const pageInputs = document.getElementsByClassName("page-input");
+    console.log(pageInputs);
+    for (const input of pageInputs) {
+        input.value = page;
+    }
+
+    getComments();
+}
+
+function setNoOfProjectsPerPage(value) {
+    filterOptions.noOfCommentsPerPage = value;
+
+    const projectsPerPageIndicators = document.getElementsByClassName(
+        "projects-per-page-indicator"
+    );
+
+    for (const indicator of projectsPerPageIndicators) {
+        indicator.value = value;
+    }
+}
 /**
  * API Request to get comments
  * Self calls by default
  */
-(async function getComments() {
+async function getComments() {
     /**
      * Gets the current project stored in local storage
      */
+    enableLoader();
     const currentProject = getCurrentProject();
 
     if (!currentProject) {
@@ -389,13 +437,6 @@ function getCommentTemplate(comment) {
         history.back();
         return;
     }
-    /**
-     * Setting up filter options
-     */
-    const filterOptions = {
-        noOfCommentsPerPage: null,
-        page: 1,
-    };
 
     /**
      * Obtaining the URL stored lin local storage by the configuration file
@@ -446,6 +487,7 @@ function getCommentTemplate(comment) {
                     await getComments();
                 }
 
+                disableLoader();
                 return;
             }
             /**
@@ -473,8 +515,12 @@ function getCommentTemplate(comment) {
                     commentsSection.innerHTML + commentHtml;
             });
         }
+        disableLoader();
     } catch (error) {
         console.error(error);
         alert("comments request Failed, Please Check Your network");
+        disableLoader();
     }
-})();
+}
+
+getComments();

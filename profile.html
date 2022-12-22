@@ -94,11 +94,121 @@
                 >
             </div>
 
+            <div id="pagination" class="pagination">
+                <div class="page-numbers-container">
+                    <img src="/images/angle-left.png" alt="" />
+                    <div class="page-numbers">
+                        <span
+                            class="active-page-number"
+                            id="page-number-1"
+                            onclick="changePage(1) "
+                            >1</span
+                        >
+                        <span id="page-number-2" onclick="changePage(2)"
+                            >2</span
+                        >
+                        <span id="page-number-3" onclick="changePage(3)"
+                            >3</span
+                        >
+                        <span id="page-number-4" onclick="changePage(4)"
+                            >4</span
+                        >
+                        <span id="page-number-5" onclick="changePage(5)"
+                            >5</span
+                        >
+                    </div>
+                    <img src="/images/angle-right.png" alt="" />
+                </div>
+
+                <div class="page-input-container">
+                    <label class="info-label">Page</label>
+                    <input
+                        id="page-input"
+                        class="page-input"
+                        type="number"
+                        value="1"
+                        min="1"
+                        max="4"
+                        class="pages-input"
+                        onchange="changePage(this.value)"
+                    />
+                </div>
+
+                <div class="projects-per-page-container">
+                    <label class="info-label">Projects Per Page</label>
+                    <select
+                        id="projects-per-page"
+                        class="projects-per-page projects-per-page-indicator"
+                        onchange="setNoOfProjectsPerPage(this.value)"
+                    >
+                        <option value="2">2</option>
+                        <option value="5">5</option>
+                        <option value="10" selected>10</option>
+                        <option value="20">20</option>
+                    </select>
+                </div>
+            </div>
+
             <!-- Projects come here -->
             <section
                 class="projects-section"
                 id="profile-projects-section"
             ></section>
+
+            <div id="pagination" class="pagination">
+                <div class="page-numbers-container">
+                    <img src="/images/angle-left.png" alt="" />
+                    <div class="page-numbers">
+                        <span
+                            class="active-page-number"
+                            id="page-number-1"
+                            onclick="changePage(1) "
+                            >1</span
+                        >
+                        <span id="page-number-2" onclick="changePage(2)"
+                            >2</span
+                        >
+                        <span id="page-number-3" onclick="changePage(3)"
+                            >3</span
+                        >
+                        <span id="page-number-4" onclick="changePage(4)"
+                            >4</span
+                        >
+                        <span id="page-number-5" onclick="changePage(5)"
+                            >5</span
+                        >
+                    </div>
+                    <img src="/images/angle-right.png" alt="" />
+                </div>
+
+                <div class="page-input-container">
+                    <label class="info-label">Page</label>
+                    <input
+                        id="page-input"
+                        class="page-input"
+                        type="number"
+                        value="1"
+                        min="1"
+                        max="4"
+                        class="pages-input"
+                        onchange="changePage(this.value)"
+                    />
+                </div>
+
+                <div class="projects-per-page-container">
+                    <label class="info-label">Projects Per Page</label>
+                    <select
+                        id="projects-per-page"
+                        class="projects-per-page projects-per-page-indicator"
+                        onchange="setNoOfProjectsPerPage(this.value)"
+                    >
+                        <option value="2">2</option>
+                        <option value="5">5</option>
+                        <option value="10" selected>10</option>
+                        <option value="20">20</option>
+                    </select>
+                </div>
+            </div>
         </main>
         <footer id="footer"></footer>
         <script src="script.js"></script>

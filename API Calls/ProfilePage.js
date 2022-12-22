@@ -113,6 +113,44 @@ function getProjectTemplate(project) {
 </div>`;
 }
 
+function changePage(page) {
+    if (page == filterOptions.page) {
+        return;
+    }
+
+    const previousActive = document.getElementById(
+        `page-number-${filterOptions.page}`
+    );
+    if (previousActive) {
+        previousActive.classList.toggle("active-page-number");
+    }
+    filterOptions.page = page;
+
+    const currentActive = document.getElementById(`page-number-${page}`);
+    if (currentActive) {
+        currentActive.classList.toggle("active-page-number");
+    }
+
+    const pageInputs = document.getElementsByClassName("page-input");
+    console.log(pageInputs);
+    for (const input of pageInputs) {
+        input.value = page;
+    }
+
+    getUserProjects();
+}
+
+function setNoOfProjectsPerPage(value) {
+    filterOptions.noOfProjectsPerPage = value;
+
+    const projectsPerPageIndicators = document.getElementsByClassName(
+        "projects-per-page-indicator"
+    );
+
+    for (const indicator of projectsPerPageIndicators) {
+        indicator.value = value;
+    }
+}
 /**
  * API call to  GET projectS, It self-calls by default
  */

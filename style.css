@@ -174,9 +174,8 @@ body {
 .projects-section {
     border: 0.1px solid var(--var-light-grey);
     min-height: 60vh;
-    padding: 2em;
+    padding: 1em;
     border-radius: 5px;
-    margin: 2em !important;
 }
 
 .footer-container {
@@ -266,6 +265,10 @@ body {
     padding: 1em;
     color: var(--var-darkGreen);
     min-height: 5em;
+}
+
+.project-body {
+    padding: 2em;
 }
 
 .project-bottom {
@@ -670,6 +673,10 @@ body {
     margin: 1em;
 }
 
+.attachments-area-container {
+    width: 100%;
+}
+
 .comments-container {
     width: 100%;
 }
@@ -736,6 +743,64 @@ body {
     /* .profile-page-cover-area {
         width: 90vh;
     } */
+}
+
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 70%;
+    padding: 2em;
+    border-radius: 5px;
+    margin: auto;
+}
+
+.page-numbers-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.page-numbers-container img {
+    width: 1.2em;
+    height: 1.8em;
+    opacity: 0.6;
+    padding: 0.3em;
+}
+
+.page-numbers {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.page-numbers span {
+    font-size: 1.2rem;
+    padding: 0.2em;
+    cursor: pointer;
+}
+.projects-per-page-container select,
+.page-input-container input {
+    font-size: 1.1rem;
+    margin-left: 0.5em;
+    border: 1px solid var(--var-light-grey);
+    outline: none;
+    padding: 0.2em 0.5em;
+    border-radius: 5px;
+}
+
+.projects-per-page-container select:focus,
+.page-input-container input:focus {
+    border: 1px solid var(--var-lightGreen);
+}
+
+.active-page-number {
+    color: var(--var-lightGreen);
 }
 
 .loader {
