@@ -1,0 +1,524 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    background: whitesmoke;
+}
+
+.header {
+    width: 100%;
+    height: 4rem;
+    background-color: #158d87;
+}
+
+.logo {
+    width: 10%;
+    margin-left: 3rem;
+}
+
+.logo p {
+    float: left;
+    align-content: center;
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.items {
+    float: right;
+    margin-right: 10rem;
+}
+
+.items ul li {
+    display: inline-block;
+    list-style: none;
+}
+
+.items ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 40px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.items ul li a:hover {
+    color: aqua;
+}
+
+.profile {
+    float: right;
+    margin-top: -2.5rem;
+    margin-right: -4rem;
+}
+
+#menu {
+    float: right;
+    margin-top: 4rem;
+    background: #af9bcb;
+    height: 4rem;
+    margin-right: -40rem;
+}
+
+#menu ul li {
+    list-style: none;
+    padding-top: 1px;
+    padding-right: 2rem;
+}
+
+#btn1 {
+    margin-left: 1rem;
+    width: 4rem;
+}
+
+.dropdown {
+    display: none;
+}
+
+.search {
+    margin-left: 25%;
+    background: #a784d8;
+    height: 20px;
+    width: 30%;
+    border-radius: 35px;
+    padding: 15px;
+    margin-top: 1rem;
+}
+
+.searchField {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0px;
+    color: white;
+    font-size: 16px;
+    line-height: 10px;
+}
+
+.searchBtn {
+    color: white;
+    float: right;
+    width: 40px;
+    height: 30px;
+    border-radius: 50%;
+    background: #a784d8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+.item2 {
+    margin-left: 15rem;
+}
+
+.item2 ul {
+    list-style: none;
+}
+
+.item2 ul li {
+    display: inline-block;
+}
+
+.item2 ul li a {
+    color: #815eb3;
+    text-decoration: none;
+    padding-left: 2rem;
+}
+
+.item2 ul li a:hover {
+    text-decoration: underline;
+}
+
+.item2 ul li a:active {
+    text-decoration: underline;
+}
+
+.center {
+    margin-top: 19rem;
+    margin-left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: rgba(255, 255, 255, 0.491);
+    border-radius: 25px;
+}
+
+.center h1 {
+    text-align: center;
+    padding: 0 0 5px 0;
+    border-bottom: 1px solid silver;
+    color: #6912e3;
+}
+
+.center form {
+    padding: 1px 40px;
+    box-sizing: border-box;
+}
+
+form .text_field {
+    position: relative;
+    border-bottom: 2px solid silver;
+    margin: 30px 0;
+}
+
+.text_field input {
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.text_field label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.text_field span::before {
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #158d87;
+}
+
+.text_field input:focus ~ label,
+.text_field input:valid ~ label {
+    top: -5px;
+    color: #158d87;
+}
+
+.text_field input:focus ~ span::before,
+.text_field input:valid ~ span::before {
+    width: 100%;
+}
+
+input[type="submit"] {
+    width: 90%;
+    height: 40px;
+    border: 1px solid;
+    background: #8043d6;
+    border-radius: 25px;
+    font-size: 18px;
+    color: #e9f4fb;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+}
+
+.button input[type="submit"]:hover {
+    border-color: #690aef;
+    width: 50%;
+}
+
+.mainSection {
+    background: rgb(234, 232, 232);
+    margin-top: 0px;
+    padding-top: 0px;
+    min-height: 80vh;
+}
+
+.MAIN {
+    margin-left: 1rem;
+}
+
+.fa-calendar {
+    color: #815eb3;
+}
+
+.fa-heart {
+    color: #815eb3;
+}
+
+.fa-commenting {
+    color: #815eb3;
+}
+
+.fa-user-circle {
+    color: #815eb3;
+}
+
+.h2 {
+    color: #815eb3;
+}
+
+p {
+    color: #158d87;
+}
+
+.newbtn {
+    background: rgb(237, 202, 207);
+    border-radius: 5px;
+    border: none;
+    float: right;
+    margin-top: -3rem;
+    margin-right: 4rem;
+    height: 1.5rem;
+}
+
+#btnmain {
+    border: none;
+    background: rgb(234, 232, 232);
+}
+
+.MAIN ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 2rem;
+}
+
+#thin {
+    border-color: pink;
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+}
+
+footer {
+    background: #158d87;
+    color: #fff;
+    text-align: center;
+    height: 10%;
+    bottom: 0px;
+    margin-bottom: -15px;
+}
+
+footer ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 2rem;
+}
+
+.parafooter {
+    color: #fff;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky + .search {
+    padding-top: 60px;
+}
+
+.createproject {
+    width: 350px;
+    position: relative;
+    left: 40%;
+    background: #faf8f8;
+    height: 30rem;
+}
+
+h1 {
+    color: #815eb3;
+    text-align: center;
+}
+
+.inputfield input {
+    margin-bottom: 1rem;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    width: 90%;
+    font-size: 16px;
+    border: 1px solid pink;
+    background: none;
+    outline: none;
+    color: #158d87;
+}
+
+.inputfield textarea {
+    margin-bottom: 1rem;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    width: 90%;
+    font-size: 16px;
+    border: 1px solid pink;
+    background: none;
+    outline: none;
+    color: #158d87;
+}
+
+::placeholder {
+    color: #158d87;
+}
+
+form .selection {
+    margin-bottom: 1rem;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    width: 90%;
+    font-size: 16px;
+    border: 1px solid pink;
+    background: none;
+    outline: none;
+    color: #158d87;
+}
+
+.upload {
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-left: 10%;
+}
+
+.upload input {
+    outline: none;
+    background: none;
+}
+
+/* .fa-cloud-upload {
+    color: #815eb3;
+} */
+
+.create {
+    color: white;
+    background: #8043d6;
+    border: none;
+    border-radius: 5px;
+    width: 6rem;
+    height: 2rem;
+    margin-left: 37%;
+}
+
+.profileMain {
+    margin-top: 2rem;
+    margin-left: 5rem;
+    margin-bottom: 2rem;
+}
+
+.fa-plus {
+    color: white;
+}
+
+.fa-pencil {
+    color: white;
+}
+
+.profBtn {
+    background: #8043d6;
+    border: none;
+    border-radius: 5px;
+    height: 2rem;
+    margin-left: 5rem;
+    color: white;
+}
+
+.PROFBTN {
+    margin-left: 40rem;
+    border: none;
+    border-radius: 5px;
+    height: 2rem;
+    background: #8043d6;
+    color: white;
+}
+
+.background {
+    background-image: url("images/cover.jpg");
+    background-size: cover;
+    height: 14rem;
+}
+
+.fa-trash {
+    color: red;
+}
+
+.fa-pencil-square {
+    color: #815eb3;
+}
+
+.singlePageButton {
+    background: pink;
+    border-radius: 5px;
+    border: none;
+
+    /* margin-right: 4rem; */
+    height: 1.5rem;
+}
+
+.likeBar ul li {
+    vertical-align: middle;
+}
+
+.contact {
+    display: inline-block;
+}
+
+.contributorsBtn li {
+    display: inline-block;
+    margin-left: 3rem;
+}
+
+.contributorsBtn li button {
+    background: pink;
+    border: none;
+    border-radius: 5px;
+    height: 1.5rem;
+    width: 3rem;
+}
+
+h3 {
+    margin-left: 2rem;
+    color: #815eb3;
+}
+.attachments li {
+    display: flex;
+    margin-left: 3rem;
+}
+.comments {
+    height: 8rem;
+    border: 1px solid pink;
+    margin-left: 3.5rem;
+    width: 50%;
+}
+.commentTop div {
+    display: inline-block;
+    vertical-align: middle;
+}
+.commentTop {
+    justify-content: space-around;
+    display: flex;
+    /* margin-left: 3rem; */
+}
+.commentStatement {
+    margin-left: 3rem;
+}
+.profileName {
+    display: inline-block;
+}
+.commentSection {
+    margin-left: 3rem;
+    width: 100%;
+}
+.commentsArea {
+    height: 20rem;
+    border: 1px solid pink;
+    margin-left: 3.5rem;
+    width: 20rem;
+}
+.comment {
+    margin-left: 2rem;
+    height: 8rem;
+    width: 20rem;
+    border: 1px solid pink;
+}
+textarea {
+}
+input[type="submit"] {
+    width: 7rem;
+    margin-left: 3rem;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}

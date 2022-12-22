@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <!-- <link rel="stylesheet" href="home.css" /> -->
+        <link rel="stylesheet" href="style.css" />
+        <link
+            rel="shortcut icon"
+            href="/images/favicon.png"
+            type="image/x-icon"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        />
+    </head>
+
+    <body>
+        <div id="navbar-container"></div>
+
+        <main class="main-content">
+            <form id="edit-project-form" class="project-form">
+                <h1 class="page-title">Edit Project</h1>
+                <label for="">Title</label>
+                <input
+                    type="text"
+                    placeholder="Project Title"
+                    required
+                    id="edit-project-title"
+                />
+                <label for="">Summary</label>
+                <textarea
+                    id="edit-project-summary"
+                    rows="6"
+                    placeholder="A short Description of the Project"
+                ></textarea>
+                <label for="">Description</label>
+                <textarea
+                    id="edit-project-description"
+                    rows="12"
+                    placeholder="A detailed Description of the Project"
+                ></textarea>
+                <label for="">Category</label>
+                <select class="selection" id="edit-project-category">
+                    <option value="Category" selected>--Category--</option>
+                    <option value="Engineering">Engineering</option>
+                    <option value="Business">Business</option>
+                    <option value="IOT">IOT</option>
+                    <option value="Software">Software</option>
+                    <option value="Art">Art</option>
+                    <option value="Other">Other</option>
+                </select>
+                <label for="">Contact Phone Number</label>
+                <input
+                    id="edit-project-contact-phonenumber"
+                    type="number"
+                    placeholder="e.g. 254712345678"
+                />
+                <label for="">Contact Email</label>
+                <input
+                    id="edit-project-contact-email"
+                    type="email"
+                    placeholder="e.g. info@snaveware.com"
+                />
+                <label for="">Status</label>
+                <select class="selection" id="edit-project-status">
+                    <option value="status" selected>--Status--</option>
+                    <option value="published">Published</option>
+                    <option value="draft">Draft</option>
+                </select>
+                <label for="">Link</label>
+                <input
+                    id="edit-project-link"
+                    type="text"
+                    placeholder="A URL to a repository or more information about the project"
+                />
+                <p class="attachments-area-title">Existing Attachments</p>
+                <div
+                    id="existing-attachments"
+                    class="existing-attachments-container"
+                ></div>
+                <p class="attachments-area-title">Add Attachments</p>
+                <div
+                    id="selected-attachments"
+                    class="upload-preview-container"
+                ></div>
+                <div class="upload-area" onclick="clickAttachmentsUpload()">
+                    <img src="/images/upload.png" alt="" />
+                    <span>Add Attachments</span>
+                </div>
+                <input
+                    id="edit-project-attachments"
+                    type="file"
+                    multiple="true"
+                    accept="image/*,application/pdf,.doc,.docx"
+                    style="display: none"
+                />
+
+                <br />
+
+                <input type="submit" class="project-submit-btn" value="Save" />
+            </form>
+        </main>
+
+        <!-- <div class="editproject">
+            <h1>Edit Project</h1>
+            <div class="inputfield">
+                <form id="edit-project-form">
+                    <input
+                        type="text"
+                        placeholder="Title"
+                        required
+                        id="edit-project-title"
+                    />
+                    <textarea
+                        id="edit-project-summary"
+                        rows="2"
+                        cols="50"
+                        placeholder="Summary"
+                    ></textarea>
+                    <textarea
+                        id="edit-project-description"
+                        rows="4"
+                        cols="50"
+                        placeholder="Description"
+                    ></textarea>
+
+                    <select class="selection" id="edit-project-category">
+                        <option value="Category" selected>Category</option>
+                        <option value="Engineering">Engineering</option>
+                        <option value="Business">Business</option>
+                        <option value="IOT">IOT</option>
+                        <option value="Software">Software</option>
+                        <option value="Art">Art</option>
+                        <option value="Other">Other</option>
+                    </select>
+
+                    <input
+                        id="edit-project-contact-phonenumber"
+                        type="number"
+                        placeholder="Contact Phone Number"
+                    />
+                    <input
+                        id="edit-project-contact-email"
+                        type="email"
+                        placeholder="Contact Email"
+                    />
+
+                    <select class="selection" id="edit-project-status">
+                        <option value="status" selected>Status</option>
+                        <option value="published">Published</option>
+                        <option value="draft">Draft</option>
+                    </select>
+                    <input
+                        id="edit-project-link"
+                        type="text"
+                        placeholder="Link to repository or more information"
+                    />
+                    <input
+                        id="edit-project-attachments"
+                        type="file"
+                        class="upload"
+                    />
+                    <br />
+
+                    <input type="submit" class="edit" value="Save" />
+                </form>
+            </div>
+        </div> -->
+        <footer id="footer"></footer>
+        <script src="script.js"></script>
+        <script src="/API Calls/Config.js"></script>
+        <script src="/API Calls/Utils.js"></script>
+        <script src="/API Calls/editProject.js"></script>
+    </body>
+</html>

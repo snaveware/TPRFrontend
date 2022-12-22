@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FETCH API</title>
+</head>
+
+<body>
+    <button id="getText">GET TEXT</button>
+
+</body>
+<script>
+    document.getElementById('getText').addEventListener('click', gettingText);
+
+    function gettingText() {
+        // console.log('clicked');
+        fetch('simple.txt')
+            .then((res) => res.txt())
+            .then((data) => console.log(data))
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Register</title>
+
+        <!-- <link rel="stylesheet" href="home.css" /> -->
+        <link rel="stylesheet" href="style.css" />
+        <link
+            rel="shortcut icon"
+            href="/images/favicon.png"
+            type="image/x-icon"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        />
+    </head>
+
+    <body>
+        <div id="navbar-container"></div>
+        <main class="main-content">
+            <div class="register-form-container">
+                <form class="register-form" id="register-form">
+                    <h1 class="register-title">Register</h1>
+                    <label>First Name</label>
+                    <input
+                        type="text"
+                        id="register-firstname-input"
+                        value="John"
+                        required
+                    />
+
+                    <label>Last Name</label>
+                    <input
+                        type="text"
+                        id="register-lastname-input"
+                        value="Doe"
+                        required
+                    />
+
+                    <label>Email</label>
+
+                    <input
+                        type="email"
+                        id="register-email-input"
+                        value="john@gmail.com"
+                        required
+                    />
+
+                    <label>Phone Number</label>
+                    <input
+                        type="number"
+                        id="register-phonenumber-input"
+                        value="254712345678"
+                        required
+                    />
+
+                    <label>Password</label>
+                    <input
+                        type="password"
+                        id="register-password-input"
+                        value="12345678"
+                        required
+                    />
+
+                    <label>Confirm Password</label>
+                    <input
+                        type="password"
+                        id="register-password-confirmation-input"
+                        value="12345678"
+                        required
+                    />
+
+                    <input
+                        class="register-submit-btn"
+                        type="submit"
+                        value="Submit"
+                    />
+                </form>
+            </div>
+        </main>
+        <footer id="footer"></footer>
+        <script src="script.js"></script>
+        <script src="/API Calls/Config.js"></script>
+        <script src="/API Calls/Utils.js"></script>
+        <script src="/API Calls/Register.js"></script>
+    </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Login</title>
+
+        <!-- <link rel="stylesheet" href="home.css" /> -->
+
+        <link
+            rel="shortcut icon"
+            href="/images/favicon.png"
+            type="image/x-icon"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <div id="navbar-container"></div>
+
+        <main class="main-content">
+            <div class="login-form-container">
+                <form id="login-form" class="login-form">
+                    <h1 class="login-title">Login</h1>
+                    <label> Phone Number</label>
+                    <input
+                        type="Phone Number"
+                        id="phone-number-input"
+                        required
+                    />
+
+                    <label>Password </label>
+                    <input type="password" id="password-input" required />
+
+                    <input
+                        type="submit"
+                        class="login-submit-btn"
+                        value="Login"
+                    />
+                </form>
+            </div>
+        </main>
+        <footer id="footer"></footer>
+        <script src="script.js"></script>
+        <script src="/API Calls/Config.js"></script>
+        <script src="/API Calls/Utils.js"></script>
+        <script src="/API Calls/Login.js"></script>
+    </body>
+</html>

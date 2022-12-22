@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Home Page</title>
+        <link
+            rel="shortcut icon"
+            href="/images/favicon.png"
+            type="image/x-icon"
+        />
+        <!-- <link rel="stylesheet" href="home.css"> -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <div id="navbar-container"></div>
+
+        <main class="main-content">
+            <div class="search">
+                <input
+                    type="text"
+                    class="search-input"
+                    placeholder="Search for a project"
+                    id="home-search-input"
+                />
+            </div>
+
+            <div class="categories-filter">
+                <a
+                    class="active-category"
+                    id="category-all"
+                    onclick="setCurrentCategory('All')"
+                    >All</a
+                >
+
+                <a
+                    id="category-engineering"
+                    onclick="setCurrentCategory('Engineering')"
+                    >Engineering</a
+                >
+
+                <a
+                    id="category-business"
+                    onclick="setCurrentCategory('Business')"
+                    >Business</a
+                >
+
+                <a id="category-iot" onclick="setCurrentCategory('IOT')">IOT</a>
+
+                <a
+                    id="category-software"
+                    onclick="setCurrentCategory('Software')"
+                    >Software</a
+                >
+
+                <a id="category-art" onclick="setCurrentCategory('Art')">Art</a>
+                <a id="category-other" onclick="setCurrentCategory('Other')"
+                    >Other</a
+                >
+            </div>
+
+            <!-- Projects come here -->
+            <section
+                class="projects-section"
+                id="home-projects-section"
+            ></section>
+        </main>
+        <footer id="footer"></footer>
+        <script src="script.js"></script>
+        <script src="/API Calls/Config.js"></script>
+        <script src="/API Calls/Utils.js"></script>
+        <script src="/API Calls/Home.js"></script>
+    </body>
+</html>

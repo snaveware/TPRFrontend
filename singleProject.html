@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Single Project</title>
+        <!-- <link rel="stylesheet" href="home.css" /> -->
+        <link rel="stylesheet" href="style.css" />
+        <link
+            rel="shortcut icon"
+            href="/images/favicon.png"
+            type="image/x-icon"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        />
+    </head>
+
+    <body>
+        <div id="navbar-container"></div>
+
+        <main class="main-content">
+            <div
+                class="single-project-page display-none"
+                id="single-project-page"
+            >
+                <a
+                    class="project-title"
+                    href="${location.origin}/singleProject.html"
+                    onclick="setCurrentProject('${project._id}')"
+                    id="single-project-title"
+                ></a>
+                <div class="project-top">
+                    <p class="top-user">
+                        <img
+                            src="/images/user.png"
+                            class="profile-img-sm"
+                            id="single-project-profile-image"
+                            alt="${getLoggedInUserFirstName()}"
+                        />
+                        <span id="single-project-owner-name"></span>
+                    </p>
+                    <p class="top-date">
+                        <img src="/images/calendar.png" alt="" />
+                        <span id="single-project-date"></span>
+                    </p>
+                </div>
+
+                <article
+                    class="project-body"
+                    id="single-project-description"
+                ></article>
+                <div class="single-project-bottom">
+                    <div class="bottom-reactions-container">
+                        <div class="bottom-reactions">
+                            <a id="single-project-like-btn">
+                                <img
+                                    id="single-project-like-image"
+                                    src="/images/unliked.png"
+                                    alt=""
+                                />
+                                <span id="likes-counter"></span>
+                            </a>
+
+                            <a href="/singleProject.html#comments" id="btnmain">
+                                <img src="/images/comment.png" alt="" />
+                                <span id="comments-counter"></span>
+                            </a>
+                        </div>
+
+                        <span
+                            class="category"
+                            id="single-project-category"
+                        ></span>
+                    </div>
+
+                    <div class="single-project-bottom-info">
+                        <p class="contact-item">
+                            <span class="info-label">Email </span>
+                            <span
+                                class="info-value"
+                                id="single-project-contact-email"
+                            ></span>
+                        </p>
+                        <p class="contact-item">
+                            <span class="info-label">Phone Number </span>
+                            <span
+                                class="info-value"
+                                id="single-project-contact-phonenumber"
+                            ></span>
+                        </p>
+                        <a href="" id="more-info-link" class="more-info-link"
+                            >More About The Project</a
+                        >
+                    </div>
+                </div>
+
+                <div class="attachments-area-container">
+                    <h3 class="section-label">Attachments</h3>
+                    <div
+                        class="single-project-attachments-area"
+                        id="attachments-area"
+                    ></div>
+                </div>
+                <div id="comments" class="comments-container">
+                    <h3 class="section-label">Comments</h3>
+                    <section
+                        class="comments-section"
+                        id="single-project-comments-section"
+                    ></section>
+                </div>
+                <div class="new-comment-container">
+                    <h3 class="section-label">New comment</h3>
+                    <div class="new-comment-section">
+                        <form class="comment-form" id="comment-form">
+                            <textarea
+                                class="comment"
+                                style="border: solid 1px pink"
+                                placeholder="Write Your Comment Here..."
+                                rows="4"
+                                id="comment-message-textarea"
+                            ></textarea>
+
+                            <input
+                                type="submit"
+                                class="comment-submit-btn"
+                                value="Send"
+                            />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer id="footer"></footer>
+        <script src="script.js"></script>
+        <script src="/API Calls/Config.js"></script>
+        <script src="/API Calls/Utils.js"></script>
+        <script src="/API Calls/SingleProject.js"></script>
+    </body>
+</html>
